@@ -33,20 +33,32 @@ ___
 - The project will have three different acquisitions of different datasets
     - Use the GDP-based method to collect unemployment rate, industrial production, real gdp, gdp, and recession dates.
     - Use general economy data such as CPI, money supply, Core CPI, GDP deflator, unemployment rate, industrial production, PCE to determine the recession.
+    - Use NBER data [^4]
 - The project will explore three different acquired datasets
 - The project will then create a classification model based on the best defined recession.
 - Document the conclusion, key takeaways, and recommendations.
+
+***
+## Initial Question
+- 
 
 ***
 ## Term Defination
 - Monetary Policy: the actions that a nation's central bank takes to control the money supply in an economy with the goal of helping grow a slowing economy or to contract an economy that is growing too fast.
 [[Back to the Background](#background)]
 
+- Inflation is caused when the money supply in an economy grows at faster rate than the economy’s ability to produce goods and services. In our auction economy the production of goods and services was unchanged, but the money supply grew from round one to round two. Because the money supply grew, and the output of goods and services did not grow, our economy experienced inflation.
+[[Back to the Final NoteBook](https://github.com/QinzhiChen/individual_project/blob/main/final%20notebook.ipynb#general_data_based_wrangle)]
+
+- GDP Deflator: A measure of inflation in the prices of goods and services produced in the United States, including exports. The gross domestic price deflator closely mirrors the GDP price index, although they are calculated differently. The GDP deflator is used by some firms to adjust payments in contracts. [^6]
+[[Back to the Final NoteBook](https://github.com/QinzhiChen/individual_project/blob/main/final%20notebook.ipynb#general_data_exploration)]
 
 
-
-
+## Reference
 
 [^1]: https://www.economist.com/the-economist-explains/2022/08/12/what-is-a-recession
 [^2]: https://www.bloomberg.com/news/articles/2022-07-12/no-us-recession-until-obscure-panel-of-eggheads-says-it-is-so?sref=6JSdcyMu
-[^3]: https://www.conference-board.org/topics/recession/US-recession-probabilities-reach-96-percent
+[^3]: https://www.conference-board.org/topics/recession/US-recession-probabilities-reach-96-percent\
+[^4]: https://www.nber.org/news/business-cycle-dating-committee-announcement-september-20-2010
+[^5]: https://www.stlouisfed.org/education/feducation-video-series/episode-1-money-and-inflation
+[^6]: https://www.bea.gov/data/prices-inflation/gdp-price-deflator

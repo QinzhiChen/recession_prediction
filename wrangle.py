@@ -66,6 +66,7 @@ def gen_based():
     gdp_based_df.is_recession[round(gdp_based_df.is_recession,2)==0.67]=1
     gdp_based_df.is_recession[round(gdp_based_df.is_recession,2)==0.33]=1
     gdp_based_df['gdp_pct_change']=gdp_based_df.rgdp.pct_change()
+    gdp_based_df['monp_pct_change']=gdp_based_df.moneysup.pct_change()
     gdp_based_df=gdp_based_df.dropna()
     gdp_based_df.index=gdp_based_df.index.astype('datetime64')
     return gdp_based_df
@@ -82,3 +83,27 @@ def split_gen_based(gen_based_df):
     return gen_train,gen_validate,gen_test,gen_train_val
 
 
+def nber_based():
+    rgdp=fred.get_series('GDPC1')
+    rgdi=fred.get_series('A261RX1Q020SBEA')
+    rmanufacture=fred.get_series('CMRMTSPL')
+    indpro=fred.get_series('INDPRO')
+    personincome=fred.get_series('W875RX1')
+    weeklyprivate=fred.get_series('AWHI')
+    payroll=fred.get_series('PAYEMS')
+    empp=fred.get_series('EMRATIO')
+    is_recession=fred.get_series('USREC')
+    gdp_based_df=pd.DataFrame(data=[rgdp,rgdi,rmanufacture,indpro,personincome,weeklyprivate,payroll,empp,is_recession],index=['rgdp','rgdi','rmanufacture','indpro','personincome','weeklyprivate','payroll','empp','is_recession']).T
+    gdp_based_df['quarterly'] = pd.PeriodIndex(gdp_based_df.index, freq='q')
+    gdp_based_df=gdp_based_df.groupby('quarterly').agg('mean')
+    gdp_based_df.is_recession[round(gdp_based_df.is_recession,2)==0.67]=1
+    gdp_based_df.is_recession[round(gdp_based_df.is_recession,2)==0.33]=1
+    gdp_based_df['gdp_pct_change']=gdp_based_df.rgdp.pct_change()
+    gdp_based_df['gdi_pct_change']=gdp_based_df.rgdi.pct_change()
+    gdp_based_df['manu_pct_change']=gdp_based_df.rmanufacture.pct_change()
+    gdp_based_df['indpro_pct_change']=gdp_based_df.indpro.pct_change()
+    gdp_based_df['payroll_pct_change']=gdp_based_df.payroll.pct_change()
+    gdp_based_df['empp_pct_change']=gdp_based_df.empp.pct_change()
+    gdp_based_df=gdp_based_df.dropna()
+    gdp_based_df.index=gdp_based_df.index.astype('datetime64')
+    return gdp_based_df
