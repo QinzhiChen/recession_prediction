@@ -35,7 +35,7 @@ def model_split_(df_train,df_validate,df_test):
 def modeling(x_train, y_train, x_validate, y_validate):
     logrreg_m= LogisticRegression(random_state=123)
     dectre_m = DecisionTreeClassifier(max_depth=5, random_state=123)
-    ranfor_m = RandomForestClassifier(max_depth=6, random_state=123)
+    ranfor_m = RandomForestClassifier(max_depth=5, random_state=123)
     knn_m= KNeighborsClassifier(n_neighbors=20, weights='uniform')
     models = [logrreg_m, dectre_m, ranfor_m, knn_m]
     for model in models:

@@ -1,16 +1,18 @@
 # Recession Yes/No
 
 ## Exeucitve Summary
+- This project focuses on three different methods to define the recession. The exploration found that it is unjust to say that the United States is in recession solely based on two consecutive declines in the GDP or high-interest rates. The project found that NBER used many different data to determine whether the United States is in a recession. The project retrieved as much data as possible, conducted several explorations, and created a machine learning model to predict the next recession. The model achieved 96% accuracy and a 100% recall rate. The next step is to capture more data that is not available. 
 
 ***
 [[Goal](#goal)]
 [[Project Descriptions](#project_descriptions)]
+[[Background](#background)]
+[[Planning](#planning)]
 [[Data Dictionary](#dictionary)]
-[[Data Acquire and Prep](#wrangle)]
-[[Data Exploration](#explore)]
-[[Modeling](#model)]
-[[Conclusion](#conclusion)]
-[[Steps to Reproduce](#reproduce)]
+[[Recommendation, Conclusion, and Next Step](#recommendation,_conclusion,and_next Step)]
+[[Steps to Reproduce](#steps_to_reproduce)]
+[[Term Defination](#term_defination)]
+[[Reference](#reference)]
 ___
 
 ## Goal
@@ -34,13 +36,89 @@ ___
     - Use the GDP-based method to collect unemployment rate, industrial production, real gdp, gdp, and recession dates.
     - Use general economy data such as CPI, money supply, Core CPI, GDP deflator, unemployment rate, industrial production, PCE to determine the recession.
     - Use NBER data [^4]
-- The project will explore three different acquired datasets
+- The project will explore three different acquired datasets and answer questions.
 - The project will then create a classification model based on the best defined recession.
 - Document the conclusion, key takeaways, and recommendations.
 
 ***
 ## Initial Question
-- 
+- Whether we can determine the recession solely based on the GDP
+- Whether we can determine the recession solely based on the interest rate
+- Whether we can find correlation from the NBER dataset
+
+***
+## Data Dictionary
+- First dataset
+| Feature | Definition | Data Type |
+| ----- | ----- | ----- |
+| unem | unemployment rate| float |
+| indpro | industrial production | float |
+| rgdp | real gross domestic product | float |
+| gdp | gross domestic product | float |
+| is_recession | whether the United States is in recession | float |
+| gdp_pct_change | percentage of the gdp change  | float |
+
+- Second dataset
+| Feature | Definition | Data Type |
+| ----- | ----- | ----- |
+| cpi | consumer price index| float |
+| moneysup | current money supply | float |
+| corecpi |core consumer price index  |float |
+| gdp_def | gross domestic product deflator | float |
+| unem |unemployment rate | float |
+| indpro |industrial production | float |
+| rgdp |real gross domestic production| float |
+| gdp |gross domestic production| float |
+| rate | interest rate | float |
+| is_recession | whether the United States is in recession | float |
+| gdp_pct_change | percentage of the gdp change  | float |
+| monp_pct_change |money supply percentage change| float |
+
+- Third dataset
+| Feature | Definition | Data Type |
+| ----- | ----- | ----- |
+| rgdi | real gross domestic income| float |
+| rmanufacture | Real manufacturing and trade sales associated with change from NAICS to SIC  | float |
+| indpro | Index of industrial production |float |
+| personincome |  Real personal income less transfers | float |
+| weeklyprivate |Aggregate weekly hours index in total private industries  | float |
+| payroll |Payroll survey employment | float |
+| empp |Household survey employment| float |
+| gdp |gross domestic production| float |
+| is_recession | whether the United States is in recession | float |
+| gdp_pct_change | percentage of the gdp change  | float |
+| gdi_pct_change |gross domestic income percentage change| float |
+| manu_pct_change |  Real manufacturing and trade sales associated with change from NAICS to SIC percentage change over time | float |
+| indpro_pct_change | industrial production percentage change | float |
+| payroll_pct_change | payroll percentage change | float |
+| empp_pct_change | household survey employment percentage change | float |
+
+***
+# Recommendation, Conclusion, and Next Step
+
+## Recommendation
+- We should not believe there is recession based on single data
+- The RandomForestClassifer can be used for our prediction
+
+## Conclusion 
+- In general, the data did show favor for two consecutive declines in GDP to call it a recession.
+- The United States NBER used a different formula to call the recession, it could take a few months for NBER to announce it.
+- The high unemployment rate doesn't mean there is a recession.
+- The United States does not use the GDP-based formula to determine the recession, but an official determination came from NBER. Therefore, the hypothesis t-test can pass the null hypothesis.
+- the percentage change has negative correlation with recession
+- This is good data to use for the classification prediction because the United States is using those data to announce the recession
+
+## Next Step
+- Deploy the machine learning model
+- Improvise the machine learning model
+- Collect missing data
+
+***
+## Steps to Reproduce
+- request a API via [FRED](https://fred.stlouisfed.org/docs/api/fred/)
+- Create your own env file
+- Download all files on the [github](https://github.com/QinzhiChen/individual_project)
+- Enjoy!
 
 ***
 ## Term Defination
