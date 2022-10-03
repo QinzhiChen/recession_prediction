@@ -9,7 +9,7 @@
 [[Background](#background)]
 [[Planning](#planning)]
 [[Data Dictionary](#data-dictionary)]
-[[Recommendation, Conclusion, and Next Step](#recommendation,-conclusion,and-next_step)]
+[[Recommendation, Conclusion, and Next Step](#recommendation,-conclusion,-and-next-step)]
 [[Steps to Reproduce](#steps-to-reproduce)]
 [[Term Defination](#term-defination)]
 [[Reference](#reference)]
@@ -120,7 +120,8 @@ ___
 ## Steps to Reproduce
 - request a API via [FRED](https://fred.stlouisfed.org/docs/api/fred/)
 - Create your own env file
-- Download all files on the [github](https://github.com/QinzhiChen/individual_project)
+- install FRED libary
+- Download all files on this repo [github](https://github.com/QinzhiChen/individual_project)
 - Enjoy!
 
 ***
