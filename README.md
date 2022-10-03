@@ -49,6 +49,7 @@ ___
 ***
 ## Data Dictionary
 - First dataset
+
 | Feature | Definition | Data Type |
 | ----- | ----- | ----- |
 | unem | unemployment rate| float |
@@ -59,6 +60,7 @@ ___
 | gdp_pct_change | percentage of the gdp change  | float |
 
 - Second dataset
+
 | Feature | Definition | Data Type |
 | ----- | ----- | ----- |
 | cpi | consumer price index| float |
@@ -75,6 +77,7 @@ ___
 | monp_pct_change |money supply percentage change| float |
 
 - Third dataset
+
 | Feature | Definition | Data Type |
 | ----- | ----- | ----- |
 | rgdi | real gross domestic income| float |
