@@ -5,13 +5,13 @@
 
 ***
 [[Goal](#goal)]
-[[Project Descriptions](#project_descriptions)]
+[[Project Descriptions](#project-descriptions)]
 [[Background](#background)]
 [[Planning](#planning)]
 [[Data Dictionary](#dictionary)]
-[[Recommendation, Conclusion, and Next Step](#recommendation,_conclusion,and_next_Step)]
-[[Steps to Reproduce](#steps_to_reproduce)]
-[[Term Defination](#term_defination)]
+[[Recommendation, Conclusion, and Next Step](#recommendation,-conclusion,and-next_Step)]
+[[Steps to Reproduce](#steps-to-reproduce)]
+[[Term Defination](#term-defination)]
 [[Reference](#reference)]
 ___
 
